@@ -10,9 +10,7 @@
 		<main class="container mx-auto">
 			<!-- * Vue.jsとは -->
 			<div class="flex flex-col items-center">
-				<h1 class="text-center text-3xl py-2 font-bold text-white bg-blue-500 w-full">
-					Vue.jsとは
-				</h1>
+				<h1 class="text-center text-3xl py-2 font-bold text-white bg-black w-full">Vue.jsとは</h1>
 				<!-- * Vueの管理下に置く -->
 				<div id="ex1">
 					<p class="mt-2">
@@ -20,6 +18,19 @@
 						{{ luffy }}<br />
 						{{ `俺は${luffy}だ` }}
 					</p>
+				</div>
+			</div>
+
+			<!-- * v-bind -->
+			<div class="flex flex-col items-center mt-20 text-center">
+				<h1 class="text-center text-3xl py-2 font-bold text-white bg-black w-full">v-bind</h1>
+				<h2 class="text-center text-xl mt-4">属性値にVueインスタンスデータを結び付ける</h2>
+				<div id="ex2" class="mt-2">
+					<a
+						href="chopper.html"
+						class="inline-block bg-blue-600 hover:bg-blue-500 text-white rounded px-4 py-2"
+						>チョッパー</a
+					>
 				</div>
 			</div>
 		</main>
