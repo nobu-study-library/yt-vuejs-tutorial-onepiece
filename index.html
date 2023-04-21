@@ -4,15 +4,29 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Veu.js練習</title>
+		<title>Vue.js練習</title>
 	</head>
-	<body class="box-content py-10 bg-yellow-50">
-		<main class="mx-auto">
-			<h1 class="text-center text-4xl font-bold">Vue.jsとは</h1>
+	<body class="box-content py-10 px-8 bg-yellow-50">
+		<main class="container mx-auto">
+			<!-- * Vue.jsとは -->
+			<div class="flex flex-col items-center">
+				<h1 class="text-center text-3xl py-2 font-bold text-white bg-blue-500 w-full">
+					Vue.jsとは
+				</h1>
+				<!-- * Vueの管理下に置く -->
+				<div id="ex1">
+					<p class="mt-2">
+						<!-- Mustashe(マスタッシュ)構文 -->
+						{{ luffy }}<br />
+						{{ `俺は${luffy}だ` }}
+					</p>
+				</div>
+			</div>
 		</main>
 		<!-- * TailwindCSS CDN -->
 		<script src="https://cdn.tailwindcss.com"></script>
 		<!-- * Vue.js CDN -->
-		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+		<script src="index.js"></script>
 	</body>
 </html>
