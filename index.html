@@ -45,19 +45,23 @@
 			<!-- * v-for -->
 			<div class="flex flex-col items-center mt-20 text-center">
 				<h1 class="text-center text-3xl py-2 font-bold text-white bg-black w-full">v-for</h1>
-				<h2 class="px-2 text-center text-xl mt-4 border border-black">繰り返し処理（配列）</h2>
-				<!-- Array -->
-				<ul id="ex3" class="mt-2">
-					<!-- * key属性は Vueが識別するために -->
-					<li v-for="character in four_emperors" v-bind:key="character">{{ character }}</li>
-				</ul>
-				<!-- Object -->
-				<h2 class="px-2 text-center text-xl mt-4 border border-black">繰り返しオブジェクト</h2>
-				<ul id="ex4" class="mt-2">
-					<li v-for="(devil_fruit, character) in devil_fruits" v-bind:key="character">
-						{{ character }}:{{devil_fruit}}
-					</li>
-				</ul>
+				<div>
+					<h2 class="px-2 text-center text-xl mt-4 border border-black">繰り返し処理（配列）</h2>
+					<!-- Array -->
+					<ul id="ex3" class="mt-2">
+						<!-- * key属性は Vueが識別するために -->
+						<li v-for="character in four_emperors" v-bind:key="character">{{ character }}</li>
+					</ul>
+				</div>
+				<div>
+					<!-- Object -->
+					<h2 class="px-2 text-center text-xl mt-4 border border-black">繰り返しオブジェクト</h2>
+					<ul id="ex4" class="mt-2">
+						<li v-for="(devil_fruit, character) in devil_fruits" v-bind:key="character">
+							{{ character }}:{{devil_fruit}}
+						</li>
+					</ul>
+				</div>
 			</div>
 
 			<!-- * v-on -->
