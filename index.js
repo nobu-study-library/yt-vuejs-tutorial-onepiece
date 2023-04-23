@@ -34,3 +34,20 @@ const app4 = new Vue({
 		},
 	},
 });
+
+// * v-on
+const app5 = new Vue({
+	el: '#ex5',
+	data: {
+		devil: '悪魔の実',
+		name: 'ゴムゴムの実',
+	},
+});
+
+const app6 = new Vue({
+	el: '#ex6',
+	data: {
+		devil: '悪魔の実',
+		name: 'ゴムゴムの実',
+	},
+});

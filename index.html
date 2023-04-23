@@ -24,7 +24,9 @@
 			<!-- * v-bind -->
 			<div class="flex flex-col items-center mt-20 text-center">
 				<h1 class="text-center text-3xl py-2 font-bold text-white bg-black w-full">v-bind</h1>
-				<h2 class="text-center text-xl mt-4">属性値にVueインスタンスデータを結び付ける</h2>
+				<h2 class="px-2 text-center text-xl mt-4 border border-black">
+					属性値にVueインスタンスデータを結び付ける
+				</h2>
 				<div id="ex2" class="mt-2">
 					<a
 						v-bind:href="url"
@@ -43,18 +45,58 @@
 			<!-- * v-for -->
 			<div class="flex flex-col items-center mt-20 text-center">
 				<h1 class="text-center text-3xl py-2 font-bold text-white bg-black w-full">v-for</h1>
-				<h2 class="text-center text-xl mt-4">繰り返し処理（配列）</h2>
-				<!-- Array -->
-				<ul id="ex3" class="mt-2">
-					<!-- * key属性は Vueが識別するために -->
-					<li v-for="character in four_emperors" v-bind:key="character">{{ character }}</li>
-				</ul>
-				<!-- Object -->
-				<ul id="ex4" class="mt-2">
-					<li v-for="(devil_fruit, character) in devil_fruits" v-bind:key="character">
-						{{ character }}:{{devil_fruit}}
-					</li>
-				</ul>
+				<div>
+					<h2 class="px-2 text-center text-xl mt-4 border border-black">繰り返し処理（配列）</h2>
+					<!-- Array -->
+					<ul id="ex3" class="mt-2">
+						<!-- * key属性は Vueが識別するために -->
+						<li v-for="character in four_emperors" v-bind:key="character">{{ character }}</li>
+					</ul>
+				</div>
+				<div>
+					<!-- Object -->
+					<h2 class="px-2 text-center text-xl mt-4 border border-black">繰り返しオブジェクト</h2>
+					<ul id="ex4" class="mt-2">
+						<li v-for="(devil_fruit, character) in devil_fruits" v-bind:key="character">
+							{{ character }}:{{devil_fruit}}
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- * v-on -->
+			<div class="flex flex-col items-center mt-20 text-center">
+				<h1 class="text-center text-3xl py-2 font-bold text-white bg-black w-full">v-on</h1>
+				<div>
+					<h2 class="px-2 text-center text-xl mt-4 border border-black">イベントを処理する</h2>
+					<div id="ex5">
+						<input
+							type="text"
+							v-bind:placeholder="devil"
+							v-bind:value="name"
+							v-on:input="name = $event.target.value"
+							class="mt-4 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						/>
+						<!-- * inputのイベント発生を持つ $eventイベントオブジェクト -->
+						{{ name }}
+					</div>
+					<div>
+						<h2 class="px-2 text-center text-xl mt-4 border border-black">省略記法</h2>
+						<div id="ex6">
+							<!-- :〇〇はv-bindの省略 -->
+							<!-- @〇〇はv-onの省略 -->
+							<input
+								type="text"
+								:placeholder="devil"
+								:value="name"
+								@input="name = $event.target.value"
+								class="mt-4 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+							/>
+							<!-- * inputのイベント発生を持つ $eventイベントオブジェクト -->
+							{{ name }}
+						</div>
+					</div>
+				</div>
 			</div>
 		</main>
 		<!-- * TailwindCSS CDN -->
